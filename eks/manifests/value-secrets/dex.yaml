@@ -1,0 +1,67 @@
+ingress:
+  enabled: true
+  className: nginx
+  # annotations:
+  #   kubernetes.io/tls-acme: "true"
+  #   cert-manager.io/cluster-issuer: acme-staging
+  hosts:
+    - host: dex.dev.example.com
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls:
+    - secretName: dex-prod-secret
+      hosts:
+        - dex.dev.example.com
+
+config:
+  logger:
+    level: "debug"
+
+  issuer: https://dex.dev.example.com
+  storage:
+    type: kubernetes
+    config:
+      inCluster: true
+
+  oauth2:
+    responseTypes: ["code", "token", "id_token"]
+    skipApprovalScreen: true
+
+  connectors:
+    - type: github
+      id: github
+      name: GitHub
+      config:
+        clientID: "c48d8aa93ac73574bb21"
+        clientSecret: "3ea648b893b591897432c00e9c0005a4fb2963b7"
+        redirectURI: https://dex.dev.example.com/callback
+        orgs:
+          - name: my-github-org
+            teams:
+              - my-github-devops-team
+              - my-github-ns01-team
+              - my-github-ns02-team
+        loadAllGroups: false
+        teamNameField: slug
+        useLoginAsID: false
+
+  staticClients:
+    - id: k8s-auth-eks-nonprod
+      secret: b226aed658fa187c74VjcmV0
+      name: "EKS Dev"
+      redirectURIs:
+        - https://login.dev.example.com/callback
+
+  enablePasswordDB: true
+  staticPasswords:
+    - email: "dgeorgievski@gmail.com"
+      # bcrypt hash of the string "password": $(echo password | htpasswd -BinC 10 admin | cut -d: -f2)
+      hash: "$2y$10$1hUXgAY2hX7ltqeqR7Rp0eNc2CN43tqLIiT/BppEiHCJCsd6C7W7."
+      username: "dgeorgievski"
+      userID: "08a8684b-db88-4b73-90a9-3cd1661f5466"
+
+# Note: this will inject the environment variables directly to the pods.# In a production environment you should mount these keys from a secret using envFrom.# See https://artifacthub.io/packages/helm/dex/dex#values
+env:
+  GITHUB_CLIENT_ID: "dex-eks-dev"
+  GITHUB_CLIENT_SECRET: "3ea648b893b591897432c00e9c0005a4fb2963b7"

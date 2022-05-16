@@ -1,0 +1,1126 @@
+{
+    "eventVersion": "1.08",
+    "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROA4STNCXSNDFTED5B2H:1651608034126661953",
+        "arn": "arn:aws:sts::864590937242:assumed-role/karpenter-controller-perf-test-nonprod/1651608034126661953",
+        "accountId": "864590937242",
+        "accessKeyId": "ASIA4STNCXSNOXFHKRET",
+        "sessionContext": {
+            "sessionIssuer": {
+                "type": "Role",
+                "principalId": "AROA4STNCXSNDFTED5B2H",
+                "arn": "arn:aws:iam::864590937242:role/karpenter-controller-perf-test-nonprod",
+                "accountId": "864590937242",
+                "userName": "karpenter-controller-perf-test-nonprod"
+            },
+            "webIdFederationData": {
+                "federatedProvider": "arn:aws:iam::864590937242:oidc-provider/oidc.eks.us-east-1.amazonaws.com/id/D3E2FC5C7E16A2FAB624F9DC140CFE4F",
+                "attributes": {}
+            },
+            "attributes": {
+                "creationDate": "2022-05-03T20:00:34Z",
+                "mfaAuthenticated": "false"
+            }
+        }
+    },
+    "eventTime": "2022-05-03T20:59:56Z",
+    "eventSource": "ec2.amazonaws.com",
+    "eventName": "CreateFleet",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "44.196.37.4",
+    "userAgent": "aws-sdk-go/1.43.30 (go1.18.1; linux; amd64) karpenter.sh-v0.9.1",
+    "requestParameters": {
+        "CreateFleetRequest": {
+            "TargetCapacitySpecification": {
+                "DefaultTargetCapacityType": "on-demand",
+                "TotalTargetCapacity": 1
+            },
+            "Type": "instant",
+            "OnDemandOptions": {
+                "AllocationStrategy": "lowest-price"
+            },
+            "LaunchTemplateConfigs": {
+                "LaunchTemplateSpecification": {
+                    "LaunchTemplateName": "asg-one-mozart-perf-test20220428210845332000000001",
+                    "Version": "$Latest"
+                },
+                "Overrides": [
+                    {
+                        "AvailabilityZone": "us-east-1b",
+                        "tag": 1,
+                        "SubnetId": "subnet-0eba3f40d79950051",
+                        "InstanceType": "c4.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1a",
+                        "tag": 2,
+                        "SubnetId": "subnet-06814e289d9e052e3",
+                        "InstanceType": "c4.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1c",
+                        "tag": 3,
+                        "SubnetId": "subnet-0fb07e6f55293f7ee",
+                        "InstanceType": "c4.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1a",
+                        "tag": 4,
+                        "SubnetId": "subnet-06814e289d9e052e3",
+                        "InstanceType": "c5a.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1b",
+                        "tag": 5,
+                        "SubnetId": "subnet-0eba3f40d79950051",
+                        "InstanceType": "c5a.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1c",
+                        "tag": 6,
+                        "SubnetId": "subnet-0fb07e6f55293f7ee",
+                        "InstanceType": "c5a.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1a",
+                        "tag": 7,
+                        "SubnetId": "subnet-06814e289d9e052e3",
+                        "InstanceType": "c6a.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1c",
+                        "tag": 8,
+                        "SubnetId": "subnet-0fb07e6f55293f7ee",
+                        "InstanceType": "c6a.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1b",
+                        "tag": 9,
+                        "SubnetId": "subnet-0eba3f40d79950051",
+                        "InstanceType": "c6a.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1b",
+                        "tag": 10,
+                        "SubnetId": "subnet-0eba3f40d79950051",
+                        "InstanceType": "c6i.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1c",
+                        "tag": 11,
+                        "SubnetId": "subnet-0fb07e6f55293f7ee",
+                        "InstanceType": "c6i.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1a",
+                        "tag": 12,
+                        "SubnetId": "subnet-06814e289d9e052e3",
+                        "InstanceType": "c6i.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1b",
+                        "tag": 13,
+                        "SubnetId": "subnet-0eba3f40d79950051",
+                        "InstanceType": "c5.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1c",
+                        "tag": 14,
+                        "SubnetId": "subnet-0fb07e6f55293f7ee",
+                        "InstanceType": "c5.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1a",
+                        "tag": 15,
+                        "SubnetId": "subnet-06814e289d9e052e3",
+                        "InstanceType": "c5.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1b",
+                        "tag": 16,
+                        "SubnetId": "subnet-0eba3f40d79950051",
+                        "InstanceType": "c3.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1c",
+                        "tag": 17,
+                        "SubnetId": "subnet-0fb07e6f55293f7ee",
+                        "InstanceType": "c3.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1a",
+                        "tag": 18,
+                        "SubnetId": "subnet-06814e289d9e052e3",
+                        "InstanceType": "c5d.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1c",
+                        "tag": 19,
+                        "SubnetId": "subnet-0fb07e6f55293f7ee",
+                        "InstanceType": "c5d.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1b",
+                        "tag": 20,
+                        "SubnetId": "subnet-0eba3f40d79950051",
+                        "InstanceType": "c5d.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1a",
+                        "tag": 21,
+                        "SubnetId": "subnet-06814e289d9e052e3",
+                        "InstanceType": "c5ad.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1c",
+                        "tag": 22,
+                        "SubnetId": "subnet-0fb07e6f55293f7ee",
+                        "InstanceType": "c5ad.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1b",
+                        "tag": 23,
+                        "SubnetId": "subnet-0eba3f40d79950051",
+                        "InstanceType": "c5ad.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1a",
+                        "tag": 24,
+                        "SubnetId": "subnet-06814e289d9e052e3",
+                        "InstanceType": "c5n.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1b",
+                        "tag": 25,
+                        "SubnetId": "subnet-0eba3f40d79950051",
+                        "InstanceType": "c5n.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1c",
+                        "tag": 26,
+                        "SubnetId": "subnet-0fb07e6f55293f7ee",
+                        "InstanceType": "c5n.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1a",
+                        "tag": 27,
+                        "SubnetId": "subnet-06814e289d9e052e3",
+                        "InstanceType": "c1.xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1c",
+                        "tag": 28,
+                        "SubnetId": "subnet-0fb07e6f55293f7ee",
+                        "InstanceType": "c1.xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1b",
+                        "tag": 29,
+                        "SubnetId": "subnet-0eba3f40d79950051",
+                        "InstanceType": "c1.xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1b",
+                        "tag": 30,
+                        "SubnetId": "subnet-0eba3f40d79950051",
+                        "InstanceType": "m3.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1c",
+                        "tag": 31,
+                        "SubnetId": "subnet-0fb07e6f55293f7ee",
+                        "InstanceType": "m3.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1c",
+                        "tag": 32,
+                        "SubnetId": "subnet-0fb07e6f55293f7ee",
+                        "InstanceType": "m5zn.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1a",
+                        "tag": 33,
+                        "SubnetId": "subnet-06814e289d9e052e3",
+                        "InstanceType": "m5zn.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1b",
+                        "tag": 34,
+                        "SubnetId": "subnet-0eba3f40d79950051",
+                        "InstanceType": "m5zn.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1c",
+                        "tag": 35,
+                        "SubnetId": "subnet-0fb07e6f55293f7ee",
+                        "InstanceType": "m4.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1a",
+                        "tag": 36,
+                        "SubnetId": "subnet-06814e289d9e052e3",
+                        "InstanceType": "m4.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1b",
+                        "tag": 37,
+                        "SubnetId": "subnet-0eba3f40d79950051",
+                        "InstanceType": "m4.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1a",
+                        "tag": 38,
+                        "SubnetId": "subnet-06814e289d9e052e3",
+                        "InstanceType": "m5a.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1c",
+                        "tag": 39,
+                        "SubnetId": "subnet-0fb07e6f55293f7ee",
+                        "InstanceType": "m5a.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1b",
+                        "tag": 40,
+                        "SubnetId": "subnet-0eba3f40d79950051",
+                        "InstanceType": "m5a.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1b",
+                        "tag": 41,
+                        "SubnetId": "subnet-0eba3f40d79950051",
+                        "InstanceType": "t3a.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1c",
+                        "tag": 42,
+                        "SubnetId": "subnet-0fb07e6f55293f7ee",
+                        "InstanceType": "t3a.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1a",
+                        "tag": 43,
+                        "SubnetId": "subnet-06814e289d9e052e3",
+                        "InstanceType": "t3a.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1a",
+                        "tag": 44,
+                        "SubnetId": "subnet-06814e289d9e052e3",
+                        "InstanceType": "m6a.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1b",
+                        "tag": 45,
+                        "SubnetId": "subnet-0eba3f40d79950051",
+                        "InstanceType": "m6a.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1c",
+                        "tag": 46,
+                        "SubnetId": "subnet-0fb07e6f55293f7ee",
+                        "InstanceType": "m6a.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1b",
+                        "tag": 47,
+                        "SubnetId": "subnet-0eba3f40d79950051",
+                        "InstanceType": "m5n.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1a",
+                        "tag": 48,
+                        "SubnetId": "subnet-06814e289d9e052e3",
+                        "InstanceType": "m5n.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1c",
+                        "tag": 49,
+                        "SubnetId": "subnet-0fb07e6f55293f7ee",
+                        "InstanceType": "m5n.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1c",
+                        "tag": 50,
+                        "SubnetId": "subnet-0fb07e6f55293f7ee",
+                        "InstanceType": "m6i.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1b",
+                        "tag": 51,
+                        "SubnetId": "subnet-0eba3f40d79950051",
+                        "InstanceType": "m6i.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1a",
+                        "tag": 52,
+                        "SubnetId": "subnet-06814e289d9e052e3",
+                        "InstanceType": "m6i.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1b",
+                        "tag": 53,
+                        "SubnetId": "subnet-0eba3f40d79950051",
+                        "InstanceType": "m5.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1a",
+                        "tag": 54,
+                        "SubnetId": "subnet-06814e289d9e052e3",
+                        "InstanceType": "m5.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1c",
+                        "tag": 55,
+                        "SubnetId": "subnet-0fb07e6f55293f7ee",
+                        "InstanceType": "m5.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1a",
+                        "tag": 56,
+                        "SubnetId": "subnet-06814e289d9e052e3",
+                        "InstanceType": "t3.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1b",
+                        "tag": 57,
+                        "SubnetId": "subnet-0eba3f40d79950051",
+                        "InstanceType": "t3.2xlarge"
+                    },
+                    {
+                        "AvailabilityZone": "us-east-1c",
+                        "tag": 58,
+                        "SubnetId": "subnet-0fb07e6f55293f7ee",
+                        "InstanceType": "t3.2xlarge"
+                    }
+                ],
+                "tag": 1
+            },
+            "TagSpecification": [
+                {
+                    "ResourceType": "instance",
+                    "tag": 1,
+                    "Tag": [
+                        {
+                            "Value": "",
+                            "tag": 1,
+                            "Key": "karpenter.sh/provisioner-name"
+                        },
+                        {
+                            "Value": "karpenter.sh/provisioner-name/",
+                            "tag": 2,
+                            "Key": "Name"
+                        },
+                        {
+                            "Value": "owned",
+                            "tag": 3,
+                            "Key": "kubernetes.io/cluster/perf-test-nonprod"
+                        }
+                    ]
+                },
+                {
+                    "ResourceType": "volume",
+                    "tag": 2,
+                    "Tag": [
+                        {
+                            "Value": "",
+                            "tag": 1,
+                            "Key": "karpenter.sh/provisioner-name"
+                        },
+                        {
+                            "Value": "karpenter.sh/provisioner-name/",
+                            "tag": 2,
+                            "Key": "Name"
+                        },
+                        {
+                            "Value": "owned",
+                            "tag": 3,
+                            "Key": "kubernetes.io/cluster/perf-test-nonprod"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "responseElements": {
+        "CreateFleetResponse": {
+            "fleetInstanceSet": "",
+            "xmlns": "http://ec2.amazonaws.com/doc/2016-11-15/",
+            "requestId": "fea12134-9f81-4cb3-aad5-562087acf06d",
+            "fleetId": "fleet-30fc4777-ab77-afd1-2698-830204d294c4",
+            "errorSet": {
+                "item": [
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0fb07e6f55293f7ee",
+                                "instanceType": "t3a.2xlarge",
+                                "availabilityZone": "us-east-1c"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: MNFfDz-Vjuz84tdQl4KCAyg83LGy4UyRynfWFae13slf3dv1JcHRcoj2appqic2Egda9p1tCONRLqz0rSoYBUIchBmNO7wE_4InO6DHduTsu7NfTdw4OOqYAJTdKPRHW9v_POcXNdFxcfTWoU1J9oxlfybJhaAQWmQK9mgwtITcIBsv521SvDFWJwFX3Y9FGONmJgmEzmB22CsZTiNcncCqw9J99gtqmrQBzk9-Hiya-5dNjdEbnK92mJv_lUTc8vLsE_huhmohp7enxZ06oNDQeSj0PodmkSS3_A1StWMZrNp9Mw7s0Cfim2OS7FTR2roY9r8pudXB8Bq7f7G70Z0vSKce2JptSAs9WYMRbmtuKxYzfOCee5WcNzxdbqtR502WmmGRUk_Ip2uB5lOdq4YY0jBP6jcUM7YH0Y4tsSM5ME8Brcl9Ulk6gwODG5UGpz9RNDfig7EwV6bBc4FI9JQOQCh0q6Pz4a4T9tULBCwMJirAZEPEKvcgpczh6JDTYu91HjtZGRyVdF6FerMcFbjuGp8mJ43-m5ZBZkQzLQ1pHGxxt-dCFJes5e3iETXNcKllcV5mlZ4I75Ueabk6AKsgH343ulDNykRIf9jJEjj06KeYfJMpGVahuyoLc0ezxy-1gWfi7ZOocBuwp9BCejQ",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-06814e289d9e052e3",
+                                "instanceType": "t3a.2xlarge",
+                                "availabilityZone": "us-east-1a"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: z2DtBJWxuU_Q7bB-71u83wjzkepAe_J2yTI6dKvAmdRQiJ4T2MzzsAyOlJ11XAkVfYD3cJxvLU0vVaJ_mX4TT38_xDXGUIz0GOhUI1yvZ2U_VMbILu3P7wBMYTw6NRtUzbp96sMLiNuF6DIZnZ_v8Z01hpiTzeKOmYA9GFNlWQ0XX6BzZ_x6TxdALi9psjMl5oKiG12Op2Xa0_ArwtgvufcyqUXZNH4Js2gMYKPT8Q_lqaGG1me5LoZs92ZvfHnccxBIve1N6WupffdIqmxIlyvwZDjpSAfd2YT92iprnYjV6f7VviPiLDQTuqTpcp6YiA_rWYlILQROmDtj92y1IspnWGKlgFOz1h4RWs2R7QxPCZqxeOTQ7WjsCjxNcN44Ko14iG1RiFJ8FPuZXFN9qcbtau7Zxot3eM2dIv8DM4e-wbOBTMoWJFYBKp9qBRDtt7LE9hjcdvNpgYAEjHQJl8kbupSq69sP8BBFvj-ZggC61mPlGwX5-kkT91Qwe_Tm0xBCHjGN3xJEfnsuNK4BPZ3Jt5wlhN6Tw0ebkkphCyYdnmRM3QkbO5uIwVRAoFO9IG4lxTiBwwWqcHQanOAz7Nc16QfO-xjKtncfL9nJNWtqHO9t10JMjjX81kBM5UehLoog7zt2A9MTyw2M76QBgA",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0eba3f40d79950051",
+                                "instanceType": "t3a.2xlarge",
+                                "availabilityZone": "us-east-1b"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: ychcm4A0a_7A0eyQQ1ofKkqWWtrWoLrzJEFJs29RAkO2UmRc8-Jt8RAMEQUqoAxZ6CNoBSqICzjx9ANMx_09xoyPNmyETO70tvpGcDycmcbsQ3HN7x_Nm8KQB3oXmfZpv24aM_eNaVcd1FscfYo1GG3Dvf-P8c5FXPp1vRmPJ1M3b3W9XRZVJ7lFKonLp8YjGr9j4gQQcRUJUIZYM6vlJxrDOH3th9yHFYU7TBOQxElWcXw9L56VwczgALBPvqzntX8lp_phS9SLXjibPe66HOHf39JdqfmHDfEOuQBAtkBrV2A_uIR81yxsgnOkrvVwraX-HJFUfDrJvM48RDkqSPae4gm-ONGCJ0g1H4KYRFzz-9-MXclpf__4FHsJyWMY6JgUXG0yS_EJEj46_47e-pZY-I5naaEJ7hdR9caxa1CLAb_RP7hUMkYcdVkxZb6hiPFyDBexFzT4NAmDa0z07kztGJcZfvZljrWJaC3RQh81umomTcrV77Qr9Ex5UpptIl-79-ldalZel7CoOnTfICsIzb-KR2LAhhGPo0GSvDmGa1aHAxmhaE0JYfkEjpJ2RIo6k4vCBIOV7zr8NrvJUek4iyO7zMR4Tr5-BO-z1uKdzcDeEoDlAm8TfwNdDxWwkDcarPY1tGIt8XunYN_SSQ",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0eba3f40d79950051",
+                                "instanceType": "c6a.2xlarge",
+                                "availabilityZone": "us-east-1b"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: tPva-3leoETC0hPvMoJGKWNqE5m823H2fYdFA6-acmBBf56s2Bp6niqcRHBfga5wE2VWDyQX03_Kn17sporgixPZiMnQLCC8I_n3B_qEzRTyyL0w0N1_-V3FBZr63THiflx--YZHw83483JkSnVLwkeAZRhsc7Wq8kkvQs_uMMawaSpDJ5kZOE8WwZ7W-J1imXRHsm5t6C8mw92IwwgAl7KzF5C8OPHSlvuk8BzBMPF6DB8ZrgNWwnl8YoIG0Nc8cYSwcb7NaRW8zcAunIUHVqfcG64Z1z8HRCKVgLS1xCSYfQutIZzPJO93qnx0W0WExukb3criMWv7TOYw5e2xDVJfy7JOr5eOe7rtYKkwdHU8T94Lp6IhTElDnk_9-kDM8eoZHLNTF4PyXLZXJ5pm2hvDnLpfgFFGwO4eWmY9VZR-bULhZLiCP5DMMZPS3TwtOCJrK-GK5xxmjjZk8SXVVDz2aHGMos1KsRAv4NFmNdHgEKIYfCrT_8ZuTZQtbEyg7oRkLGDJrhV82Em-V9A1S0u555ephHn0-odJjfRY9yJquog2eiD8T1bUvxuJr4Dsn62uLoT4UOYW3Arxn1rMOVsgF4Umopu9APcGzhpMh7A1X63s3Sy9YOq0EKOu9iaD3HaMT5PpJGikOKknXaj2Bg",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0fb07e6f55293f7ee",
+                                "instanceType": "c6a.2xlarge",
+                                "availabilityZone": "us-east-1c"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: qrnLoZ3-3pV2LZKNgoitQQx8neQihr0BxKZB5vfnx0xk3RzLwsueuGGB8dBmKHeP-JLt-9VLJqsC0cjiTsTB12iA8qP07UbeVU2KvMiaxkouaYyFh1TzAezzNStl4nmtMNc4XHPvRk0A-rWfX3dGotCv5apcdTMUUbptYEMk_ZAKrzKwoPxKOPvmjawbNPGQdQVyFlUxtWWt5wJV-eXKONypRNyiCJ1aWsPLtSmPfTdqJb-GwPFssU1Z5wZcv1o9q7xFfYn4NgrPlYN18FO1qyweFAOzilBdq_7OMe_lIwrwgokYLBCqqdwcLwmtNVadTCYcSTII8byHntzSfHw8LEOUg87EW8Awyh_X7IotRVCA75xVaBQyaoqbIYVFuh1I88X0zgR-Uy0O_Z1rg6NdJnff_BvvNvsAfQqpGJd90dM4nwiMJckjSLw8-LolAhOhcXXt2zElZ3usmCwCZ84PgugMlaJVlGe9amdXOMm3WtvwuZ5sAWPIpPR5gYskfGJssGiWp13PlsSrxExEQCugqi8wJWUjPHkfBFo6_ckSsIAd2dADxtqy40eNgdM_6iKaZtlaN_7ENafS5iGuYObExYUGAg2H7bB3BC-VJhkDXwg4E5gc2ml2VWjEX2YDfz7KXahktjyDYmeC2aI9AirSlw",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-06814e289d9e052e3",
+                                "instanceType": "c6a.2xlarge",
+                                "availabilityZone": "us-east-1a"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: QAlsA16IrxRvlUL2LNGb14KHXaeLRs_h6KxJ-pWBt7c1knn9KB4YiFEAsAxPMk3LsOZHYIqFcsZ2YAhORGHV0CKDFGgFr7xwzxBm-fy9cR_RlSXoLL8jDcLV0HmXwD6hIboowZoo02PFoN6Pay8r_TVc80Rxo0kMYNPHjb58vDEQuUyQUOLx26ioVr3Y7-PorO3dBdOPkbYf2ydhmYfSnz_ZJ_fxj93T1rUC4ms-r368nkxsWUUJdyV-v4WFk8Blm7T3seKVmnCkRWrCo6jlfIzyPZRAsUE34BiCqbS-u3wAOP4TGmRmXHak6RAFvGL1Ueo2C2kUjxPaPjuzn8oJOTypN0gsoKUf4URqCAcGnnSysF7_l49ntGqgfkPHaZe6tMsHIrTDBo3JfSWudJa_pP6JTTy_uYCma9-0RVzZnG-HMI1FxzFacIDg5_lEDF8RfjsKDtfhNFpPU6hF4fvpLxT8j55I_GMM80QbHnXlVNlHtoCkzSahjLnIZ35jewK8w9A5em_YiyzyJNPM_yUx4IIWcy3mg4DjdjuPZFKJcoCLM9xs0VdJGrP_hopOgIhKJnwYcdwGxldxklKoMFCKti6riIGBQ6_T3nmcriGXVmj57tMr7mQZG4CDhOIK4KP_hQvfpGOYpuTnvGim_RJ39w",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0eba3f40d79950051",
+                                "instanceType": "c5a.2xlarge",
+                                "availabilityZone": "us-east-1b"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: lZWL_5fM67HgCK66U1nMRodrVmo5XPaqQUaR7lEgdnCpySRpQ-2sRl5IFPyFOAku3kytuxcnSZMzaFF53oYZyTerJFAHOpHrmBFSruB1dV-PJ_KD02sH5C6S0My5JydSdxsHMjlHdSjA57RkLND2ajPQ3FcavXRDW5Isq02qlLkJRONXGLzqLtHR-5wAqqHM09lyruVc9bm4cs_2PwBmr6LeT7bkSsOYCiEjwzuYhYlL2utWOXZRvmBG7-Gv7kvHfEkkU3ESF2miuUNGIi_xmVfIxKdWJCtqZEPfnLgZc-L2dXE3hFwTkwbZKaLHNldmSTTDXNNQqy7vx0j-lJnlN2cowORpHfVEzH3pbipNOMi8sdugwKJcGCP-2kKboKWexVmPfB1eaRks3zEgqpu2523uKuyz-spfb4B42r2WhoelAZeNBVQt3XaUFUvkfOqgZxd--o64GmvW4ptO-xYvLLH5XfzulhelZ2F__RdqNUjRqyKxG7wQKs5s2ely-Q13ktCMdo7mDhpZk6ZLS7i-G-OaXhGWiBEHN63-TCtzsXXRU8p-_I8m867BkpQdqJCZncw6F7EsaWQ82ET2n-IGL86_6Q1NoxnrpWQtbjmUrGjImUBsVME_vMujUuJoOmoW7hXjcBnivM7_0uSM226U1g",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0fb07e6f55293f7ee",
+                                "instanceType": "c5a.2xlarge",
+                                "availabilityZone": "us-east-1c"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: DLyxOmOAsAx0qM5SDnjHuW3UMwiXeV3I_qqQsydMmDmxk9gJN8dc6GifNvsFNklVQhCpzSjRIqL9sM2m844uyCh7QZJHte1RxmVXWOVtJsLpNURDrcpW6VSJrcpC8OHSBfm-TGfd14PR0eAdCtzwgWQ81onHRweYdTqL0qK5GP7wgGzhFzXqQaJ2Nof0pENxWOG3xflnBnjoYEmCAQEE3RE8-oMwhdoeBtr_qkRNMOZKrDrl5qqG9JCMkgmrJjsqiMRdZh_wh6iUqjjtg7RFkQk3fkF6c9GBj-1W1JV-0_cI_iY19dWq4dsmQnISsk6gsb9Z_ruYBGHgsWMck04NSx2p8oeWdYwdLEBo9U8NmUcuj1T5tlGbbj7BicaYux5aLvLCbD41LzXRAGvRU28zRGW9XQXNE00-3d4aJJf5N3OK4pu6Cz_zuqBNvkbOv5UwRt4uOzlVl4kEmASSUMBWQqXEzq9ZJJYr689rEwZi72ao3Plmj9uvW4mfxDGG9HUtUJ_ujNriV2p4nZvR5vmlKdw2eK3ssOzCA_2HWGfGvpv4Hen2uiz5--f9uRzk_GUVRuX6jUJpPitAXaSiqXyoIN5r-PeRjV1pelxCaejEwVVJGZFHq7ft5rCRD5sRAyvcPE7lOepJnWMdU2Y1HAeYKQ",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-06814e289d9e052e3",
+                                "instanceType": "c5a.2xlarge",
+                                "availabilityZone": "us-east-1a"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: NhOLyasfF4GvJnlggWN_zE0VhWmSVYZihvHTC-7UUWqa23nUcI9Fz9HE247N371V2n8Sv4W-oKcUoQkfAt6g5c2nH3prL_u__EY_GQTriX2PlhUebcRKVliM9EKLKQW7Zz_JNdg4WkGQJYEfu9RnixB6pn7CxXHeFRw1_exhRje8pJABFwPUcw0T7U2EaP3b_fVxpJbsBAV_ww_u6-_hHSnk-vKRGEqR8nsoDZkUfyYQFr6OSegdHGvqxOgyGLqXZeVzIsnQYCnCPlw0kaF0EpQyrG6YU3rPYAdTMMZ2dVgmK97w8azimIHcfVv9OLl7h-XUEeAxLffGlWncBW8KFIJaHgAEwFvFj2DON8R0kQ8qHTaYepwkl6HwCqbLo1_Vz59P-41a0VlGAlykoS8pJvX70NTl91hXKQVP6hKBCIwkGo9_DzNh4TYir6D_ZQ0yB2m6C-R4koaVLldAPq7fCfbZD3xyWOMgZfMonVKWC42DY3uCreqBOVKl2tq0Ihiq93FUujLcxVEQnaKuxzZR1XYX9aT9CRSxxN36uhl3AC1U7GUvLf9G91ExL1Te551ygat24yYIoFmOos61sQ5GlwAMDise8KXuvAHXUgu7Rwg-3ld01M23pR3kBidsoYk7QjTTrA5LUQ8x6MwuuMSuNg",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0fb07e6f55293f7ee",
+                                "instanceType": "t3.2xlarge",
+                                "availabilityZone": "us-east-1c"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: 5i8K7rpDt6cISW-qfDsSXBGRw0GxVvtkYj7c3GPkarpyrOu1otJV_WshUd2Qi3R0uf4ItlyP1JGCwX5-HUKoW5CV9_IGL7jGE5jwSd04rdjb8OygpWCLjWlpNj7_EX5XYK70_G9V4U9di4X987x9OdCZWvqvgrqD438TjVidfvztJF0xntG9r8EwY8UD7x4xDuKzvsroYYaaQKie32CRDN_zVLzyukLYmBuhnNKVA8D1DExcHuijVfMq1gtaAng-RAw0pIWnoOvaIIyO9jgLQ87J5nCkzqE0L9nsIMY5q9aKC4Iy9Lmz8a7Y00XRbZFBAxTP_vCZNyzE3Wa8ea46mpmkE2w6px7sPWVI-RDq_SG1bOt10NmNo0njdWiNOAnTUodLgbmkLX86GEa5DtPdRB0hxOzP2QdauvKebC2WlImKHyOv5ZLRnGFNsxGFlt3DKvOTvGIe7OgOXoj1V9NdeN-f3hQymZtFZN5oJigayvyh0g-YjIk4wpwm7yrZnQi7MFr3iR8DK77af40glrvTlo68MR8l91qraT7oh6Aj0Z76LqfB03vNVmWWDkpWFGhiXtlmSwB4xTm_EnerJoVWaZT6dmgKwEyqKt72-mj5dkzPafR82Oef7kSrqXIGNcA85mCfGRRR9hAJxm_u8UNr",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0eba3f40d79950051",
+                                "instanceType": "t3.2xlarge",
+                                "availabilityZone": "us-east-1b"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: Be1_kBwEaJUfjtAdjIRTjQiz9LkN7-FOS_JAktGxSltIX5IkreAx4rCejR0DD4UxrwvYB9cLlMczIje75e_mTPKP6p38_HjXClarH85jP8zexPhXIFx07YZ6Q4hlr6iG9_tJPAwCaszumvM5Ol0TMUI3cnvQPQRykEvRgtwyfvTiL538KTQYSrAEd9v3Lg-B7L3-V20Vbodfo2RmqJlVK04ERIpruFTwe5bXtjsYu4Z_rlgcX0XWPtMrh9ynKGWMunjA7im0YiXDsjRngW5W3RZP_Aw6ltkQTqa9Vr0T78Uq4cJJYm9ChTjooXC8t07fRRwc1uo5wc5ciaM65gUVClNR40ZF3xLNYA1bYT_kEwtQVzoEq0hcfcGJ_TKZTiqfiLWikTR4sGF9oG7cs-WBOas5_FLhgSJSWJAlP1wtEBjThNEl7ETY09KG-QIXDwKASzGhuRiBruVOQPcUIFG0FD-ZNII6dvMxg1mcDdokjbrfAzoz-J-B2vXQ1vJdEXgG5JqLFqdie9bz54QH_jJpeb0_EniBR23z64H2rBCYUnSsPOz05ZEyuV6uRAWM2xT-ARzF9kilsg2oKiUM37ESsdjDz46KphoWx01LBz3fEmqfrMUn6fsQBummwBc_IAHHd68eSU5LBz4jTk7lV9BL_WE",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-06814e289d9e052e3",
+                                "instanceType": "t3.2xlarge",
+                                "availabilityZone": "us-east-1a"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: JRTLAonuPXti6ByQI60SwI2h4yPJSNjJfNWFRbUEjYKiD6AvVb6XxlmN1t3BcRG2OVKp294diPjnJSHGioky24mx5gDGuUwNqEaE8yW654_eV4XlixhqwdB__3CunN_HgU5KfMurnn8z5mRtZ7Jl2cXFSPbaKkcl942lJelKW-5O5IfzJfHGMjCXYI_L68QWPAXG3nB9Hcj1fUCVlvGxhNeRtbwmeYMWrzmY_EZPCQhuMQv4hquhfdHzaB8xp-y2-FNNH5OhqdyAOl9SXuBDnzJjSQjDXB5pRg8Wrhb2wmtWZi6_XMwhgJyxlEgXxz4wsbR--VQjU3a9uh8Zm1w0cp4__KyKmu3xmk3UmpXrEVZs0zw-0XkQAwgxSqScwzbBa9fF_QpMgv1YyuBG6cvyWoq6rIcTGwOOS4upUdJjg0Go9xKdoyappyqmW2yFYvbFyLPh7PvpZMVSdWdhFzqaDpZRYlT9jHzFPYYuVUca83oMPP2Sbs-eQV2HfIB1wGvTiHhWtzcZvg-v7VJPVtMHWOM9xeeS7Dn5uSJcCa7cvBMFjEF8ERilnbgMtCrzUs_ntk3s77xR84n8JC8h27Ppfhdr-AiJeLQia93ZqaGkP9M02ncSIqnV5ltE1NXXZF8oFVtsy87xNAUpcUUuS2FWEQ",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0fb07e6f55293f7ee",
+                                "instanceType": "c6i.2xlarge",
+                                "availabilityZone": "us-east-1c"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: zBGX7rlk0rlFosU2YBAFnhSYd1yW2mwXGEaJP9ry2_Y6zRaK1KceSFFWIZJmsJ0T0dIZTphDVqLnO4sE9flStSzInlXK238hfaAeQyZUPPYlfowTkuiKgasby6h9R97at9YBO9O72ac3uTgC8tVNtP-EONqzb66G_L5PqnBblBg3F5m7N608085TSs_LJcTxnqJTTp3b9NczK0_9aMJssG3KBYJnX2J4Y5R1VKLyy_GbJLNBif91-HeeaQczIyVnug7toUAuVDGdTWycvtWDH_YrQfEAd_WMJzX1N8I6FW5B2vGhgvg4-cwdgN6eYw0ZYbFmz9dSv_UblA76xtvS5DPp2tP2ZNtntSaj62Bqmlo11t8VnLLwQrbLU1umMq-5LpwFN1AX83TehT2PsImd-e9LR-sYFLhZXZRaA8TW5mDKxwcQiv_I3DYxobvtkqAXAOG63_cYgOj4Nx6H9yXZ7jpRgOjO93I4OIem7jvPt1QVfdSmVunhkgey6wbYjDgwqx3uxlkn3Bd48DD1DeRgkn8woOYPSgb0Fj5ukpsOFqbxrX800mC2UZYyFswwHDDNdA3XnhadAIXPuBJR1S62iRBHB8HsGhbSQ4YBt-w3ROov8vA4wtyf5udKwfvnNXGyTttXwzxCpiQVeOz6ZmA4IA",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0eba3f40d79950051",
+                                "instanceType": "c6i.2xlarge",
+                                "availabilityZone": "us-east-1b"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: 1Hx8fHcjC1A3vHizl6GlMcvLX6-ADzaFUVfra1lnexTTa-UnerZbXVOJ2wY2e1KBwM__oNADqQowKUXo_flxU4VUGlTD3f9e5FIWZpxMG2jZURdn024eHaCVcEV90WbYjkuqVlVs1k_dwqpMRElFjb0R3kTlK4MnR_hgzdJWq_MqrvGu7qzY0h9B4GnjoHmRsbMwAF0h3tWMXcZeIA2vGF-luTi67FeJI0-u6TfzXm74Vqd3UuzNRHLdFv8HLo8kLTcihAplEIq6RV0rXzFocBAN3fBV4kdUp98dWv5ki51iQwfjZ8cLrzLJZP1eFXS6HXqZmj40ej4aJLguxRYyn4u6lqUTdK2FJkFNoYoCat-c0kUfrty7jnV6Oavg-LU_CWh5aTGYT55fO3P3Emi_jimDCfzjmdBdqndNGaf6-Gbapkwe221CDJwsUOLUJIThKu8k8PDDxUy5v5_1RPVrC9qUY8doh2Gyzq2th7g8UOVS3JQwzdidk3BLeZMzHv14CTtiZaghLH_VesZgiuRYCeG9MmUim-l8tiJ4RBZBONm5c7tK6FjuGHp6xUZ0qAk1s_5DsXqSFir2Ul-epXSFVRcRpi1X-7V-riEc1ZH2oBD9qwLrPIZkMDf62PaJgR3lm8pkNbDqXCMEJZEgceFMGA",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0fb07e6f55293f7ee",
+                                "instanceType": "c5.2xlarge",
+                                "availabilityZone": "us-east-1c"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: o0cxPUJRAFkwvuFVHkFjYH3_oeNTusfM7-tHklS3BTIcK7vRa4GZZsvMmabOH9IMrVTrfeWnuxddgHmywrmFMEn_9lyGlrrp4H_waOadN1GsQOO6E-roRK8LpfcHgct4AYBl6TnsX4XCdGN1I2amivZnbw_5Vfz7gd7BAMV-n6Atwy9C1JNXCHuCAulfN3ax3lbWUlP3dwnej2ka6b-iIa9XM1l6XD45rP3uSt6jCLKEj6kvyvoVKnjUWy-EGs3kn0XV34cuLsuPs7M6PnAA-6vTIlR3caEbZW2D0NXjwQtFWaYoWAX85xwKp-0IYJ-Ntgz5bGijM7MUZ0oSTfrYQTtCgZV0qz2NP43PsIorxXdbLUtiOccYJcj4dR1jCMEc16IJlqPd8_D3IbZO9fFzIkgnBS4tLuQfR6We9jadbl6TNsyzJX0Qy03Wwy-A6dF2sQxljXCC-Xzy7wVrNNcp3ZYLxPGcAUX76lVccyMAOX4WEmhkwGnuCsWvPRG7AvbZNi8euE5c9dwVxnxJcyfCVxXdARCqmVphAboFZtEnjlNI7su7cgIdqI1kMOhp2WULZybgK6RyeJ9-zMSAVztigYT-L4RBrVgwYA41J4wWbSPCI50UN8Lw-jfXXcKSzC8UH8oiiTuxfoNRdue6nthVG20",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0eba3f40d79950051",
+                                "instanceType": "c5.2xlarge",
+                                "availabilityZone": "us-east-1b"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: t-0sY_wxwOWTpaSjUBpkgqTqf3yQ1_i6PgjoM4_8oFa5-4LR_7KMHQ3F58e7Qs68K73O9bGvNdC5iTBMJJG11gXcs2fwKpT8SnV2JZJXvdEHzRXBXmo7m8Hdy4pIzL2f1YMlR-IowKjx_cHXnzWenrxKYA28gdw5Yjj4T3kxh1c0WfifEWLROrNZ85FE3czVdYkx1edeMZoOt_yprunsVO9_3hs1ZMt_GQkZqKt-NkotU2PyQKURMwQtczXCocRYyJ7yymyC07wsWpEKS9EhUJCb4nU48hwjN_zPsqwrz7n49yywhJeagmVBSoi4tN2DyPlVIMRmAksEH_Ia-qWksxyBA6G9A-ldf4ruZ7u0yoz5YUqqEibDu02NePWT2TK2RLUyMNiOx1AOEavhm1x81Ehs7l9L29taOs-FFeRXKzqtTUcAvUvsC-2Nkt9BQwBbDEZHBpVlGLGnuFitG-5iFXzaM1LlXZ9OGho0PLjbXcyGscRFd2xWcZ71C_myQTOKkLW_fFaqa72qiKWkiEEcIPmFPHNdlrTJid3ccmaMTeqwuOjEF98FofYXsikC2yLeCVMd53gmfBTk4MTOBLy-yFEK3FufhtBAhDqAtmQz8LjccbygrmCylxW1G1vopDU-UlgTeFvsRBvygUuuRw3Hfg",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-06814e289d9e052e3",
+                                "instanceType": "c5.2xlarge",
+                                "availabilityZone": "us-east-1a"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: B66LEr_gZc--cd71MIfm1zkcfZBhFymP9Vn-nMaBKvamB5sSDotVNbBUnDhgqitJN3bENDmSGN1fsy2Ss7KfH_bk22-5sRRrNYMzch6B0UVojYaYFoxW-V75HJrMGW_7dc1zxFQVhgh_EvhUuLroXGKMkTS3oBEBm68836F_b6MMD6BLTik_QkKW_zR3Ri0XGE3RCd_1w45r3O5gGJhJqztanGtFe8HKcNIZe8Kc-symJ2No6ww0dT8cIZW-e1nGM_2ri8d8bWd2T4QSHG4lp8D7RX2-Q1rIqrV86PyClU3utWA460IQRunKtZ81RYigh6qcUXxJcd955pqJoJZCamx4fzDCFy2P_ZpwaT75Zazb1h9wa4hhESK3cESgkn0XmPytkSBTjlMsDMcb8JxHSd4XuHdf3UcaKuLvpZBL5jCP0IGkq-RF_VdCYfPccMcgxG3pFXcW0D-5l8wtGiZeZ6W76m1Ht1uLv0J_IOcfaTSsBMzLrGVia6UVnfOcLC9cG9pwc3o9F3CKHw4WBaKhe_Oq0qsPUpqob0vSxskxuy9XAvv3vcCeiggeuSi4Hcf_fxlorlM93qrhuMj6Yi7z64cOoCnMsYrDjdbkGla7GhHLzT2Q5hi-ctP9OtFd3okkJe2ehseFt91HfPcVJNN7ng",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-06814e289d9e052e3",
+                                "instanceType": "c6i.2xlarge",
+                                "availabilityZone": "us-east-1a"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: NbWBXppKA86WWiZB2s3RTxO9VWcK2yUTb0jM66NOvab12myW22ovblyA3LwnxWWsxTU0D9AT-TmsQabMuXlqhjOel8x6jM7041C1LIzN8zqhPZ01mHlhpxW7jeTVpo3J0t5C_cCwrdGRxx7-8rDQRvEh_lhr0uPB-LUpFh4URaaYfXS4C9iTY9vS7g11LSuUQm4CPASoQMAkmIuYWnd9WGD5hBTZBP6q3xVrowQwwoAItfRPbEV3V4AS7DKOexrLsNAEJuFclAplZvstnM9bZqifjzlGfXE27oZ7ndz77D_xjWWg8v3hIhZobwFO_18L47d4fasPSXhf4CvoOxHRP0nObQxrOOAl3l0vov7y4aGeBnX4LxQW4Kk-07qCPpaNYqBgZeanx-WxRtvFD3FXNJ_Os2s5xQkqeMYXbzF5FwmuoSzrSzEofvMdnp3JZFW8m34k98Su1qV49NkHfHsuiJBgyYC7p0d8N9Vj7SABwLe-8BGQrQy9bBRWRoDZflo4H1oRPHhhQVDtL8cenp3LTvhbsbw4ZI0pxTOyrUVQVB845tlTR28-Nu6bQCPIbAbBDISnPpxIEZmcUAFkOcX6vw9OzqvFsb_52yq2VlmHCAuNR7UKm7GbA_VE0N5Fj5nsVBTFgQQKoYpDtepBDDvQwQ",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-06814e289d9e052e3",
+                                "instanceType": "c5ad.2xlarge",
+                                "availabilityZone": "us-east-1a"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: UA846-Cm4BZgFik7XN3NUpSKK-fKzg3sU27xF3geI_ko1Dw769_QFGNLBgi0Nvc72xZJWweM9BaZrsz5qe4qp1fOd8Xl5c8hMKr5XOC_LgTXSekoV4UXQVnVrBsK1hQaLtErGk5q9eFkozv2hePEdt5rZiYHfNAE_89wcp6nxXN8jai8eWimRIFL7bv1o2evA9ZWuDir5gTv1HplQVm_sisHoHLS4l570eYuZFCIQTw2u5QTVKvuYUyaMajCUug2sobpUZv9u_rusHrtuYlM6nqyg6w_xCZp3JSkTMDfwayN644TtJF4WBcgCK1lL3ZMCVKYT8C5iasaqOgkm6DToQjvemQRzJLNz6h6gjF3Cyn1oF6I7m8EjYwXyqIqbOI_Mw1P5YdBGw0mpYpDCMsCvFIJ5UVuwau65ZyVq2GdDf7FhgNGpgOniCP-Q4fYsfUVc7bBf9ClZ3L56TJTe_UmuBKX-9GmJJ8yfO-ao4NkFrpTkPppzKaCjUg8Mieta5A-TrPSpZoJ4HTCWbYg7n-rNcGytIvDyzmDK3cKFgzHvhynr2paRd2LfTj5_EQQ28A3kb-gHYdcD6DilSSFjPH9W2dWuuousoH3scDm4jHoTnmhftONlmTB6sB4VLcMf0ml8jEGjHvpBeSQz_66Nqzb8g",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0fb07e6f55293f7ee",
+                                "instanceType": "m5a.2xlarge",
+                                "availabilityZone": "us-east-1c"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: ebBxTsonwWc7XS0dlJHDYkEurSRBykJ752WeTcZit3T5sMxj71HmH0Dgs6FVmhyGkJmgAPpfM4iq-nzuIuI-K5st8tiNJgsCl_RtPyIhJ0Fz614mRfOjxucHM6Cly7OwBWuiTmFtyKKOk1Sjbpq1Yj6boZIvOeOhc7rVvfLWhusoqo_RbuNxgX31DGTpcgJDnxuHuM0txkyfsMcARcD_y97kof-QP0zcTg33BHRfeQaS0owMo9e3Kz4fJUFI7Lh2syVuVYFb6u8plKtJz-9MIsW4Oik5y7zfyPwyuvK6bN9-w5bZC2SSoMTP4XutXoCiXEO8K-l9DgyoLbBg_baQZNxg0lfi5zjksaXdiZkpvuBC8aXfbTrn1_SuV1v1n_Q1JWoH6o0PwyxlkAL1FiVTgEVtEpx1Y8ZYPXslsdvT3HGluLZXwPWZxccRuLC-W6__ehEwFxvFhgMTrC012GTQ1JMMpgchhq9EVU_252pm6ZqNbSgPcHMhCiU_t68Jb59VBX8SvsnVMhkWmDiuJz8Kq9hgaqBR_kPysuiE8vb8PMnWx9bk7ybFDU2A9hGLodiHZKoe-vT22zDi0VxoBovBFB8brCVLkdOQJ3Xg8uWqKvHug_uBsVY65xoSxaIUKVpgqrmaxT4sfZiSfHnp2Azjtw",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0eba3f40d79950051",
+                                "instanceType": "m5a.2xlarge",
+                                "availabilityZone": "us-east-1b"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: AdI7mkmF7RNLYx8t-FAfZKG7PyRxukfFKuq67pPRPZGczKt-kuhiruMnzuwGBM0C4lWSn2R9utYxEr_EatclMU2aU1XjGne740AFVwkswfOFtvXYgedhEWnFxjpO1oefcGke3TE-qIHzF5KOcou42J1lMLNRPhIETYGUpe0ZVkyQglybKjndHDp-Z55qUhdfjLrO8mSsgdJjJbBehxEgGhdjv0unGiM2bgF-wzkLrh2ZVv84YJg9MvZA-b_Iszo9ymzigQbqMQHDSukKDzA0aBkJv8OaJ9EYKM0q-kubPNgDE4hvVE4p1tP4qIVRu7UG42eIPQHSQH3zEtrYHOXfb4TQZQFqHQz1xxXGNgMygxCJl6cDv5ynt2sqg7E1izsMXongo1KJceoUMyyKPeK5mQUvqcIQ42zKZ0OYYc-vbXe4hW9K0oGFvgc505OuNjqnw7obdZqFuyLLhFh0p4zOTFLZtNy-Et3mz-fXvExluRKswhoCElAXcyLMNUHw0E-kvQMT4TeAHkUxoUG25TtPlFVAfoD1f-FsGXFbXokSXIGvLgQk_xTfqhI_uwlAQzyZ1xoCeT5Fq-3SCBV30VrBMaqEPLMpIr50A0uyoumH8U-nR7aKk8not0goDBbW4WYqVTpCi4ggvKuwQvk9s9VtGA",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-06814e289d9e052e3",
+                                "instanceType": "m5a.2xlarge",
+                                "availabilityZone": "us-east-1a"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: _BF_rW07ekjKTv87kDCcTEOG3mLiSzJW78n81fRD5MfPxcGTjNzPvsAfzEWOeRuT6ZdAqhj4VYf8OHN1FdXC_JN6Eo_-PmdqrkVjEcN9OSwvbOq72QJ-alPxdOp3Y8wkUiZ0iQ4R4_jSzokSSg3Y8V_PElSVprtVQflj-uAk4DrHMZFWbhXMalHTGaNXDR8nA45Gs8chs0_Rv2fAgZsnAQEiPpc8SNyCYFf9JDcK-fuP3AUtjxwKS1gukw88P9Zx0DjrU7vj67ae8dXXny7SLmmeB_dGuqO0IGTzUnXwYDBrQd8gF_i0X7LI48od2eqUjCGToWuGJkCl5W4PAOXsmadhuk47yUyZNVXU50mp6YSFRGmdViAiYEVCk0zACx1a_dT-13eXCAKMxQ6SpUYKeENe_MBxeu0KBIxhiNEVqdGebeZmb5QVzc12cLZg_9Y_e8411dZCoo_kqrk7n6vdeeupO_pzfkS0D4Was5ipxqO65pqgyy1HevtMZPUqFOfyhUIGwhw-IbT-xIKvSEBpo2M9GU5hcoCZT8vMAlaytYLvyKhPIK7JZ_zeYxdL7uLV-BLtE58VQCuq5znR0fE2Nioio04bt1QkI6iauoQrvfte_UkPdEvGGX_U5EpW0xQhJJFWJNwwLbMQdDFwq-qC4Qc",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0eba3f40d79950051",
+                                "instanceType": "c5ad.2xlarge",
+                                "availabilityZone": "us-east-1b"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: 5ivEDYZpvChNa1C8quIkR0SKrfgvAAMHKnkigz-wJXFtv2F-o0nGmrpTmnXbIcbslc8jY-_g530NpHAQ3_luLKylcSQm0bGrPbK-0gRr2aqYNOjinlJou5YausZ7edEZ6elcH66UqVOjZE0WshUCYtlr7z4t37jz69SbTgbq3qD_NvSm2Op-KfFetdA3gf-tXSE8C31WlHVeCyNeNZXcmBivoiXq9bG7-28aDxNDcDJLQrtXf3V_jetCTqxFyvV2CLYSs9LkmWUORf-BRWWgdIMH9Fy_mYbs6dPWZ2DmT0pEcqF4Ur_uybnfr3-Jzwy9DfgE48nQLsDK_7B-BgrqSE35adYvXEGq1u7h2kiQCkDuQSrOjBxQU8aaM2-cGmp6DUtWfkD_keUkTp93p58HrkHSOr-UEZ-R7ywNXKQytegfRk9R1TPcocEcqQ-Zv5qKHwWwhic25XdPhNI6rzTyO1s2tu8-oPczqi-LQS8OOGpRfUPrKVSbcATDsJxJpIVA2H7kFRUsSdWft1140w7btnLOs27BskScNnj372B19bRsmHUUkt1bVDgcLm9JqZl5Ts3CkoSH7Nv-YvyWE9BrRhQ9pRdOOXheC6Zz3XjtkOdaMSpcTbDD_tDvsA7mZ-TAXOp3ry8wjZC25MsV6UUvvg",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0fb07e6f55293f7ee",
+                                "instanceType": "c5ad.2xlarge",
+                                "availabilityZone": "us-east-1c"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: MfGg0IlIT1_CY-XOADO_AvxFJN7es1sNeYJLxJu8eLFa0teRqVPGKrim2dIMkTF20qHM7CpJLn5i6UjknkFETzVn4scbmKhKLWmA3Ecsuk3vvbH0E807CTTx2MRoVdM0S7z2S8YWem9-tsiqWT8DAgUNvXO22YSETjBQMz-7J5L3TV1vu1FIUnhQFwxaM_IYtv0StMSNksziT2zOQvT1MPLjAqAAFGKHO8Ta9g6gvYdlgkbDekvRl6AuZwbNugtHjAgLz8XVrQwBhOXwPtN-qvI9E5J3RewT_FbIq3rVTqbajkpw9YO_r4WAlTs6pbsX-FjlbnjONczC0KFU_tWKC7ADz9JzlMf8KbN4ir9glXhlhi3XShR6ktzaTRcHSz_fQxGk-5LPIa0e64GZH_U0Vx0fJs2XYXqXna_2O7PPV4MXyawpq9Y47JTEER1OjXDFY67KhJ861pHAQKvR-Fhpv4PRtbAi_QzT51q_AKMq3CvLMSFxY6S-xhmCenWv4Dq7UTMhePOy9TxLWoIDLJ7RnmKDVCD0hrDFoy-wQmARrOQbtNZybezpaYN5J7ckTn7_wXg1HFYI2Y8-kpdnInQ9ITy-VicmzPFFDJKAKza_6PlvrYaNoyIuFE7rZLhgUFKZusiChVgoJ8TiGT4Wxqeq2KI",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-06814e289d9e052e3",
+                                "instanceType": "m6a.2xlarge",
+                                "availabilityZone": "us-east-1a"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: RtRJhIeF91Yqc5fPwyyoQEX07HtnBum1DEqE6_lBYcQtoSyA-otOU2S4yarRUt53uFTOgzJ2fIzHqgAthqeMc64nxxqm3DrZwF2gbdJ-EpmqtgQ7mk11ISDo3DZP9wYuxOOSlTwTO1YUqLWNgyzKpUNy021UA2vgZ1L_AzVJ2zS6pgEtBXpaJIOfsKPpeg6udPvcb0yckQr2idvPLP3P-Q2-_OSic7mUaqXo82rnJpfQDeTejwl_XsOdxNGR7PpRe4oOhHU0OpZkgM2EzaqopgDwybi_daTS-cl3WbpWZxwmc4CBXM0N1XJoiklf9Xv5WSeXLvmTqHejmDUQ6MrEYqJm7POCPF0kg3WbKYCySrwu_1Gw5XIQGUDGHAStzBGlH33EESemfw6_vn7jBjKFU4d8pRsTQqFI3w2chVeTC1koMnCCL_P2Aq5s2JdNDQf9YgU9lg_aGZIF_xtfbzwGmAOJYx_RmhPG8wxoqjNSNcDesIdE6jVoXcjrBQXglS5hcvgeHTPyb02Iftgh_s3TekhPn9uLLvSsPUv9RKZG_JZfwMn9_gq80fmNqPyOAtK5CIykgvHceRZyGgNrlOpYanFYkI7ATUJLDfRlp8ZJD64VO8TM1G2zb5Zyv8i0FqMXVbfLXLMqW85JbF1gHO__MA",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0eba3f40d79950051",
+                                "instanceType": "m6a.2xlarge",
+                                "availabilityZone": "us-east-1b"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: vufk4Y0AnBSeG_lHK3pPpH6mR4u4VYPS7X5GYENEKone8QnFwgHCUlZA6AbA6CY-8Ot0AlBNuRvxMD5rMythu9PrtPL_KdoQgFrMk3EP7XgxkhboheZTO1RW_VLl6624FdVfU8fiBVNTGEG6s9kbwhbJ4mTyqZT5HyL28TVDV5U6lUWKuxuUlTSg20qMr0UrGQ9NUJJMqw7Vqy7GrzAck9C8ioWLmA3frxJcQjtrm_qwVnbEtN_dMw6NtuaehClulvK6OuMvXclGiJOAl5Q3L4W2efDTmRclc7ZAqP-8lpkeVtYKc_6oEw-0ZCcKac35lPc7fof5ud0adVtJ2NINT9ukLTP877MsfAYM0Sc-BDPtDFIpihz_h5dFELZqullKEYk28-K_1hTtX1hkrdN4sK5PKJvWp2hxjQoyXajaMJDBghwXcEWlu51cOyMIHs_CGwGX9wX_cntndMCVOJXHP4JNbBHjwsbb5zv-ZntxlAQdSIsZ8_7VjEFk4QTn0cbtl32d4nN8Pedk3leQYP93gWeNr_cOVhgCWnJ_l0covHUtkqsDD97Qc3HZfARFyeYRVaq4BPBscuerkFf5RdSH9iOX349HrTcA7AvLOu1bbbm_hftOgPN3geOXWLbD2xf5H3mGnaPckaCBeLQiqj551Q",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0fb07e6f55293f7ee",
+                                "instanceType": "m6a.2xlarge",
+                                "availabilityZone": "us-east-1c"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: YnyNj0gWFg4RBdRjvF02yPdj8dxJu-6jAhuyqIQt6uNAWTAKXZ0fq1zuk-fMPVywvusO4YUGwOZL3RLGJzlq-dtdoZJQZbic_j-_ZZjnqcGzu_tu1HPV_6_6GrgUbvkTkMEKcwUjc7r0KS7k_lI50cTJ7ajdPhnM5FJqjPUlnOYj7WHYtWxQIXlVSjgdRjILh9l4PmxLT8HEI8ZXcGyIjeTHQUMTOeKHEGQa8oYsDz75wgcMLJnwS8Mri4TtLSwZ9eOu0yT6kDgeWYL7J9YoqNjyVtHbteFQ78MOTr5euh4Eg1zQpyGilN-2VLeMYlnJJ5LCst9TrmOLIGeV3u6r0JnEqCs8lEZOeeks15xAY77po6DQOUwukZSW2IrunDqVcc8THEYZErcq25R_1gU7ANFHvuy864rVNkYzqlR2mRoFbJYvqUJ7Ntq0QmS8AE-W6auJ07lRrsgY-t6oTuCBJ0qx60WJTZZjUav7NmmbJGQMDcY4NYGr7kRKgx7Gkl--Bp3NDC8fzFLtaVutSPNI-yOAOyFzNz545uQl29LA-ur6etJKhrlyF6ZNQzvtdXjsiDGuhnpNM_PS-xLBUutBvjCVMJPZ0phj8BhaREp8Z0n97vxZr1PtjsQRRUbpvTNDnAFJ_TFZZ2mFQMNs8OwXoA",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0fb07e6f55293f7ee",
+                                "instanceType": "m6i.2xlarge",
+                                "availabilityZone": "us-east-1c"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: DK3ZAEj1SdjBy00i7FbPysJc-GPRMzpGg5YeLaLcD-NENQKAEOeGA-rExRvq7OLqJUubRm0--aLzEgPpS5cxvz-pXJT_2AekJDDgzBNvRlHprdJCxePGxa-IGQLczp80eJ2rjlgiEfqgn1OMLJG_Vj3iWgwFmMTGMU6S7YWZKze5l4O5HYtly-z8Ue4E_Hs727PQo6St95V_EhOU8O1JXKXEj23UUmuMWzprdKNazMoPXNq5LZmzyvWp_tX3o_zPxbKhYvizHv_3HS28pxGYc5Ar6LqlaVV7ElstO6eIFDH16JFJQi-zfij7g9kxRTof3ioEtABka8FhLFV38aby97w2pvuhOF7iFNcNsbg43LA09F5M0mI5B_edQ8YIXtfWMAfpRwvx625Cgil5djMOZf6dWuhRw71VeVOPk4MHxbv9pfyUfcSqU-D12QlXrFYfK_y5Nwkle8VNWSh__s9J_uT1J_yosxoVpnbrgYumXW877ENe0X0lhdzs5gDMNyFtJzfRTq3WPmj3z_8dP25aBlIxc4WZr00_OZj0DYUXe1m80Db5HPcMRyWKLcKBCOl_Wo2EGNeWb2CecBgS66l2AfVyWIH34szmyFUT3OCVV0NuoVXc70bfvfv0lby9ZRU2iRn_r2tkBllCSScee0t8jw",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0eba3f40d79950051",
+                                "instanceType": "m6i.2xlarge",
+                                "availabilityZone": "us-east-1b"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: Pc_SzyfRCPmooxlyd1ScQnKrJ7KntaCJSzbW1LS0-ce-bVQAIPQOWMH2Kh6KUqbcUwaiYlzC2gql7OMGEibZna2K0yztUz1_A_5M84igABKwbyKcErj1yqZfKKMmhgMVDs2VeNoeC_OSPpmcv09YPUjl-3OTjmMF5QlyY4kpCeP2tfxax_CUkBF1bAq_RpN43-Qnk0-5aRiIheYvYIMJUrFQJMZnVY2kx742ZYyl1w53ON_d8oiGal34J0YaqHzPfb4yHypy7siEo_IxoBqoleERrbI6IUlMaXy_iO8iNd13jQtOgHCsf86D3Xl5nbSzVQm2xWh4E7sqZV7YRV1_-TAy8O1hIgvcrMS3ZBK53-dbec3VkGEHCyAMCsP69LAc4plTk1UMu6jD9infDg5HrZZ02yckruydOd49tsznM50Sj-3a9SKKI5hXfLDtz8vq1gFSzfQcBvlyIlLLZBxZ6Qfgb7ToDsa5ivFmGMUwPTRHie6zwXFSEaxIXUN1bQq2K5iqfkja5Je6FqRsm0TNCkIZCejQQOyYmmnWpyXx_gWISXI88Un1ylaLDeRYJKUXU2H8vh_TaUKmMG3e98JgYMi379hNsSDgpDChZ99Vm9YQg5PFJY9QcQ1SS1xezVn-B13x7JB-ClZ7zTv6opl-Cw",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-06814e289d9e052e3",
+                                "instanceType": "m5.2xlarge",
+                                "availabilityZone": "us-east-1a"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: pvOhWAWY36x8LaFjz4xHvqDSDfyTeCoVDQGUOYh5GrjykT53RpB9qGutg-GmeH4DPDBpUHKj_EkC6SqJ4fWWFcLaKMVJk_a8knURCCXxMfgfe8HXL46RKuCKVIiUyJ0XGTFnVRdW88E67pL4rID1ZOmJitYBrF04tw4LluTTK8UjF5V4i0FF4w1j4rcSim5OBde3dYKPoidHwYSMNrdGz7F6nu1GAK8ZOxpDHKwWNTaWPzRhf03v_iUhiJxXA636skS-rr2OTWwPKzCyBpBCY_3ruj6DO8H9JSI3Gq8Jjovit6Hmb9XLE2M61uk3WlPJh4LlbpIfUGHfAyiPJSyozdJiOTbTBhWJpJQiF5wtV7isoEaN95Kd4HgpvGo3a-fKxVwSiAyWRBHledUPngibv7eNB1p3Iw5GDfVyg7RxQPWsCeRsW74r6QRk8i-5aSkOSnLLrr8gzkBt3unIvlY9_92mNjLnG54jQqS6oBUCZJSklUdx1DQya68KFaS0zkgkvRft1rEJxvRl58j-a5YU3nQWpiOlzX8YyHwFr7kb2XCoEXSKRNaRtut7oD8R2CNJp6b7QQuxzi0ubp_b1iw7UL1tH6yh4CGdfnT-rqNzVFefkS-Dco3ACBfHby3rXeAqU2GEWOs21Kf3dZ9mbufPEQ",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0fb07e6f55293f7ee",
+                                "instanceType": "c5d.2xlarge",
+                                "availabilityZone": "us-east-1c"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: UPmcK7Ie7-Mm8w04hNjZIRmc_vPcxOZcuaPq11oBi1k-wgAY9R1l5K0_dVwVyCvOO266cF8i4eS4K3ZEgt_fDWVxZr2dICUrFdUILFWEMlAycs01apboV6Q8T5_UthFd_6UmkKE9fGICbHg405Cr7PNHRAFpau6dOsDAEBG33hI2nxjDpqdx-vp5ccCWmCta-EZwjdprnxMfNiRzNMX-kQs3H0pzW_cACdGo5pKpc9uPcMKB0YUo3EsFjhR6pVrpidU3Fg-BhC3GqpoigfiVmR_Yo4kAfAMTJCECBVzdYPo8I2x7sFdoVHf4IM8K_rhE11Gw32_xJ7nX6BExHpOCW5AN0KB7EE8hUWdXUcOafVez18rn2pseuDEXLfcmzTlaSFzI0hHRabP-Ep2zXum15S_G9tlE7G3aLpe6Zww7V11kEyMnRQWgIhr3ebdzCQF5m2Ywh00emByqngUGjHAfWcgTolVodajUX7RzdebX6R_Nzw1vlef_NfePA36GIoo70cUsrhS7dAY6NLXj_PPE_mDNE-KvO5zsIbgFko014Jhvfy_gD4VQE9EFGIzqYWOq6H6pRh4ZhD5xbAgR0I9SCB2SgYBbsq6OOVldhO_862I1ldx5H-fc-ARmQcdbf1mXqEBz6iIdlqjQns6K43Wu-A",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0eba3f40d79950051",
+                                "instanceType": "c5d.2xlarge",
+                                "availabilityZone": "us-east-1b"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: QPLf4aXmnk8jgQge7vzmzFKr5mC3VtTe92Xrev5BeBfI5gwLBqa4rKoI_hIetpB73gLTKascUI_sUvdXR-SLJL3MGAPHnnYxqBX8n2VYDrGqWfTsKVbt7WG1KcnlxwCyIZtW1CQlafI3AlIDPdwZLSTxJ80XafRkXHMPp1l51Tttj_K_Ixeb1mk8qR6kGyUzifuc4PzBIuyc9wzJtsETnE4K3hVIHXenr0xYkTEfJUIcZ-vJAXIuM2BCSPUiICu8dr5xeS3XcNaZQoHZIuHQT72dAswjBJRF53vDPQoKNilkQYiawuFLIQGTlvHFjVRgiq4eDYgtd3jEjD0rmcraRyatX0vMXhonC9JXBNNkhJYnFGnKGfPS6uLS7TJOejsAC3FZH6uJNEx1Q4KQnx3rIaCoyZeHsbRsx1zVh6-AoiTNV8OiFzC2s1IaPDApFEtG8awyh5Jp3QP00ujStqoNqbk_QJtd9f-fj7cKqUTR4NHdxIyygKGuRpKa0cyWi1aZr-5Bok1hwNSndiedqa3dHiV5GWem6aeZCwfONcaCYWqbnW9lelpVwfrq01pZ62eOr0ie1Or7WWSDBgcvIn4dVNXmGlCT-JQ46QJYrL12p4-Vsq9yMrqQQ_A3paRe4tJXKGa675T3GJaS494caJThrg",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0fb07e6f55293f7ee",
+                                "instanceType": "m5.2xlarge",
+                                "availabilityZone": "us-east-1c"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: CiDKtpGwlCTd_2hPvI0jQt42VQtxstwFgTVhoJJZNxhXeioGCSQwJjaCMM25REOC6W_jyviptHBW2AvN9nlHI6mZMafWDk7ynIx1qSSy1yEBNn1zZCWi8BJ5qhCDoOI1WIk7sW6utBuoOQDOUCcTJt8Fu3ezDT0kKtStk_nCXGAAuCctAO12kkFKOgCRukNnwxUtqH-FdXvZ6Nb9WlCkGR2vWBK-A2XWnGtYHB27b57oioqGuriGuInsPgph5TltmamgrY09dF0nwckKONA_2VlRDeMbqQl7lYzn5d8ZkIjMvIxSJJF6y-9tsV9lpxSRk0hhv1gn4oA0J2wt31KiK-vF_EEgKP1EIyot689ABl4bzeanGWkuslmEuskH8hjCGcuHFHsWc31g0szzSGhzL4eSpeCt6zIoB1IkBViBDhqCottpj7vkS0UMzzRKBBJfPipXYL8m0nl_6GDODLLbU4ygSj_fn0cxE4mdKc1ZFU6Hz7IvX5Wso6kuUpM-IwPyH4m5-8r4mDwTootlwDTaJAKDc-xvqrywxe64omGJS_F-fxSu61F4wdpzoGQkVWCf3k5WogT1WBRsIfoqsTl4GrOYwbF8eKDidfWCNgAXXv3dkprZhU4Ia11iCUGreQeZ7BsRSrHi40Ov-PoMvrkuKg",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0eba3f40d79950051",
+                                "instanceType": "m5.2xlarge",
+                                "availabilityZone": "us-east-1b"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: VXLTOfnUtUthELvS0PDkD4daYpLGWVlBfNKcgCv3H7s-ORog6dfmRFFDYyr7WEiZ4fc8AFsCLc5mwbFTB0fNDCLpDj_HCeQ8Z3_-xbQRqipKA-upclulo0TKIpayS892O9omZDEMOYcjMokzY5Obd-CBVZVSAIUxXpOjLVo4TY3DnW_Wu0rrLCHFPrgyZ34jvfBkz1m_r0txJb2-hsn8h8n5eqDAenXYcklixKHZVIANo01pyzPJryZoYF3bbpcrwFoDbMRTvHhqhvAsx5ki6TIlrkXpNr1A4Y8Tdat-haUOd9eU2-IXoU60Tjh4xln5luo5VZZP5NNcOckZoMDKkVekhqLJtO5CcwV_qOq7l2PwJ3SWCzF0G3mn3528PpVvBvysq2HFGyAVfIYanXNdDOwZEJf-k5EyKhvXTweKLxByGqMSqFK9RELiCZiWpd7qPB7ArOi1hMw644cQUQvU2PhGwRdXFfb4x7yJ_1veet8lD1yW61ofm6CQgarfInCdN24VKAQAcD5YFxHYjAX7OlcjeYLCDckJC3NEiNyEE_pu5CBDV52m9B9yUZoVYy6-JMBcxgZfy4ANvhzvR-DXRG9vLiXG7gOA0KanRlP78kAlw8u1UYVz7U_dxWBZU3C7gKm97i8UmnFN4v4WRjb6vg",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-06814e289d9e052e3",
+                                "instanceType": "m6i.2xlarge",
+                                "availabilityZone": "us-east-1a"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: rWBItB6ZMpTP_FPJkPL3j7XvJ7Qj8krY-Cx3XVv7sUQvB0N0snxlhZrcElcPFuNASyzFyBBR_kn5g_QkVPjZF7E9-n2IYoCZBrwpyQRMqo0KlKSz1I5uGIocNN8YnftIfSkew6febeYDNGaRc21EzBmdu9nqU1s3YPGYp0es2LNMv-YQNwxWVL0IZXTBmg8UoyrnaMB-kdxOSwCpPsVnCUw57ASkSy7rGa7-VpSUq1TfSgwyFJwT-g7-aiVwQGqxgfBoNBUsAWmxc6zsLmxI2LRDgOAOUEsoaUR4Q3yodBU6XDcL9DDL1ls1ctcc9JBSBPGCzevuYIqi2KU4gZv_XRj4FMC0ps0owBeYbc2GNp_1AoEx4PueU57UucMX9o9OEMWxI6PxCl-sdRSh9bbHeiB4hTtb4Da5K_39ZYKLcKlECuhR1r7jB1jls6ySYArfMDnBMj9Q7xmnOiEx4_U2z1tRE0hkZfMI4YsV20zK_nFooMbyNJMFHWPv0Kh7A4w45ZbHkkdQu5kTI_pZro76B-znc3RZ6_KeNrZsj_RLRD4i9hgCVqnkCWiHF4_npWHf-eP_QSaU27yFShMnbQ4Zpwqy0MQYT2LvKSQWjPrFFQqCzLLW06d_Rx0o_IWNOE2v8mDXFbX1UEhK6wf9vxFFfw",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-06814e289d9e052e3",
+                                "instanceType": "c5d.2xlarge",
+                                "availabilityZone": "us-east-1a"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: IhbM5rdTrdY8HyjQgThKxGW0iQOe4ZQ-V_W13vFCl9yvz_mBO3j0N9S0RP8NLPZsnEaCqfOTKCHxapiXNdPRa_0ialAzkMfBeIpbKumkQA9tk49AaHAMN9TgdLKLBWEQCOacLIA45Wx0844PKpowpyB-NTt_9kTyd1bk6mHcrLIRB2xUAGQu651hg0TToAafjpitruZdj_ZoOKW7fH9DWA_kUbJrFTweh6QwqWWlswCtUGEgk9-7FgjBNHzohAeBKllvh8iOrMpGVAXPqLGakm_EG1GG1kCYBHlylVF9auxFX1eSfjGt6wDoFo4sqoAcRAl5Hv8UgYCiVd_2fuRC16kWSFc6yzcLvb0xfIGm1ZVuMQosm58btk8a1DiZHshsHtXzW8ymGy9yWofI6WoVrcTFLdox7LDP-Gop8n6RvlA4j17MiVcwEpTlCM8eXpEepKBol2tNVwYATnFMLQaL1tDefjBZdYdyLwbsOQLmQVPdF-E6QPChcCIPK8jTwxp_x_VlB_P5ZiU-MSzkSN9tkSf09e3dCVa5grUwXy3Vf_xkgxaJUgN-J8SBDhQjwoyckRX5MbtV44oy-8XbNxLGT8G4U2amotiWF87528LktHt29UXXAJ4E-5y8j0crv0iBnq7p2F6JmASSHjgfcoN7UQ",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0fb07e6f55293f7ee",
+                                "instanceType": "c4.2xlarge",
+                                "availabilityZone": "us-east-1c"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: PCN_w1tqkbRhW1qQy4skRkGdJxULNAwTw4GRCiKGlKV0YwXNP4pwCfWtcuzobBZn5YjpLUQN52slXFRdczTvHXFDQBaoAE_8GsRCyFM3q77feICdcSToUGaGQOWnEd68UMJldlwOraqzhrZh40IwBo-mu9byj4VfcKHRrfHempemGmwnUZPWK5eacpXidgHrQhC6zCTm4AiZ7RKRRfeI696lFYZLXWA9Ee-cVqNWIMRyyQBYqIxXEDVoq1mjyOvTE_O_LUPsmL-xREFcTLcjSMreYGDAHTv6sLC9wHGKdXyx2s9o9Gepl6NvhqWwUvvWn6OH6YU0gBYvB27cro8Nx7n10FpO4WBp7Qe4_5fGK2eWVcXpYun_lx0yLzO3glZ9RRt-zaEcozJ2YP-U4y6ucV2zVYNroGFAU6SBSIaR5m6axkGfxgiYalf34ORKLRwdROrLkDzMSIqrpabUJb7LcNa2iqdHJSF5slexC3-ra3KvNiMn0rd1s-osaelB41rXqPfKV3VRupfbB6QYInff4gJsh9rch7ccMGBSMw-dmEhJ7PQAaIxhzY6aixaxo1RhtAayFSRc5S78zzp3ssJFE9bR-xKmVYn72892ZbPVbDd8suCzMx3LDjWMfAWO0MuZj9AGuDmIjCumyBbJwAIDuCw",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0eba3f40d79950051",
+                                "instanceType": "c4.2xlarge",
+                                "availabilityZone": "us-east-1b"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: YqtOgNAAy3WVOqeI1lzfc-cvw4D6_UbDlPEZUTgtRaHZgLYt7xmWWBeLp0iauG7e6PsCuEw-MzKJUBhNd3S_-wKHAD76ZPDlryDT4Bq66uM2gZneViV_0L7-gq6jJwZitBG7RDqocUD9AysWgJNFN2I-q1jPkik0bOC5RIplYfjJMBoaMKneasPbUMXg2QVi5Yg-C4FiEb1Na7FwzCc8TS2vBxZqZac2QeUGj1n9SWwIpwR2TFFVkWi9-UsiBP_X4uN7a9LwqIl1Ek7dLAJnh9roY7CLhSzGkVI6b6wqFqlEfHLE28uENMS873CItH5LxHiwBDE-euCGudCpq-Jr-BR6vdMAcUVXgrv1DoVaZjEjmxy8b5PdrKGnx39QGoB7TeNVCqVYZTBrJT0nOKqdukypCNHuTIxQBeRqG_QPDE1c4s74NuU0zpl70lzBfvBnRs-d5EMCGn6QTq5w92vcme5kOON1soH9h4fx8i_ny2qMJZpMD46WVI4NqGsM8M5U3qxhJ-f13-GmsCvnza0rZ6YQxbrAmxetTAR4_iVBLznD20Mt76MNNkTNwzxDmi3o8JT5imtlHBnN97yGDK4cn-WiUdKVg9zAR_UXFsxc6Q0N9N6nDxa1kP5iTN4B04OFYeXvcJ2SsB1dEqpzh0rRLg",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-06814e289d9e052e3",
+                                "instanceType": "c4.2xlarge",
+                                "availabilityZone": "us-east-1a"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: --8GUxWdn6mbzXl_JxVlk6fq9Z8Jfie8QdCnhpCWv_HncS7o_UyuaSlkAvq5l1xo8o92ElCwBo2qAOD21gRjbX6JKao2YESuLts2hAjvAo-PKU7qxIjgrSvHDlrLReaBEXbprurmaRjJAH628IbHDT--9mmFlETalqeoEVFRLufsoRdsNiQHi-WYvAZL2nD3E936ZwKD0Z2VX_s3mLkpVNo1ZKB4iGIDPnLLsVvFioaCxs_aaCSfxbkEV1LwdIHYbxcN1vqLbRObEt8__XuabdWvnEl2_0_-Zcxk-rV_WFFvoRyQU96Uyl99NMzbIAIJtlS4D3l1R3yc5uZeEVZKm2FvIjH5PryViy0gakXe8LuyPa9THVhYheO_ebLl7Qpfy9dXKu1efnaMr0qrK4iRudQCftGPHHr7ihOc156KzZEKZJmKHQLUd5ltL4XG09BdCkHZ6sFv2uIS-bzPKddIowI3vj_DYQJbNYCIcpj3O5HRgGPksy6rrrEpcC07wvO2x862I2eZLBlF92hJHIGKqiSsnOl5xyBYZJNlTZqxAiecX1WpI23N9L5osEesmBJ1NpJFPF-TBNj3OnpKY7cqKvDEm9Dbpk4jh-WQG_py9N_hyr8U0RdKKHpwuVrhw6ldaih0vNRFjjpKlaXVFnBQTA",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0fb07e6f55293f7ee",
+                                "instanceType": "m4.2xlarge",
+                                "availabilityZone": "us-east-1c"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: _fPu1Ni-5HuOSdl-0Y6XsKcYqfclOsVoxc1xvgg4HixNZkDt3Huy4L-4IzyD_n1EYe1o0O3sZtW1JZyVZVC4D6VJTPlvnjMAtDpn0TYP6IyzjoMQjiZzImvhbs2aOVvzY4oL0hC9osS728NP-oR9a_bkOs5tCybCzsfWmt_5GI--cr7mJtYs9zR5c85siDw_jm5R3pyrB_ZroCBAtqeqdMIq8KHA0fxiP4oC3pspE_C3gaK32unP0nb64D4XkNSYyqj5KsFAl_jjVB48lOrNA1KRp-wA90I7jT2NUXbutDQP-UeyOdVL7Hrqr4BY0JbIkdkhUuJLscFK8emWK_aBBgU_PEkYJMZGUI2V7ndoO6aoMK2ONPGWNIKXQXfz1Sa2TBzcd3FTTyP8IeUv96DPgGMDEb8TZ5zv4uX_QHX9xI7QNkTXHimN5_QKyB5-8689s_5ErscxNUxxcumRIj5eIdLxrMrGI5VhHUwAtFtFnuzKxIyiY64XgVXVmsNglMv8rDTU5_jy4kDlAkbDe5vmThwThLWutR9U0G3HBHf0EDp0InXOffJrdcWjB2NdUF4Uv9oc7k0MCaky2xNMupOt10wz-4Zm4e3YrwZrwOOTUa-6oT3wwlaP61uOMP8bs8KyxKZEkqaKXt714e0ax1dvYg",
+                        "errorCode": "UnauthorizedOperation"
+                    },
+                    {
+                        "lifecycle": "on-demand",
+                        "launchTemplateAndOverrides": {
+                            "overrides": {
+                                "subnetId": "subnet-0eba3f40d79950051",
+                                "instanceType": "m4.2xlarge",
+                                "availabilityZone": "us-east-1b"
+                            },
+                            "launchTemplateSpecification": {
+                                "launchTemplateId": "lt-0ef453aacac257506",
+                                "version": 10
+                            }
+                        },
+                        "errorMessage": "You are not authorized to perform this operation. Encoded authorization failure message: z0LwQNPPs97rDbVbTMcker9FfnMlD-PMOa6_VPfpQpDQHuCZFyFpg8Srqkl7CVS2JrvotblWbNghDfMr72h3QugxOcxQjVw15Wl1MDmktd0MjJywoufQNd7Sd0hfQ6tTgVrzJal7dOR0KU1fUL7ZvPwRWSM_97mU1erwkTyBOY80-o7i_iXDVnQRtk1hXvsmUJSkINbLwrZuh9fL2U6srkSdl2EefNUxEAWgXA4ag5IMzflFGCLniMJWwSGYLBQvtkvVQWSI4BfI57I_Negf6ZycnsUyAvXla9r0XuveHItgCvX6_lZjjPs79eGFQQBmpw5N1XaR6Qvk_U8oSOqMSdmSz7aEJZGD2mVf_y5qBSc4abH4F8r99GKbCZ5gH9tD2TijzFlBOsRcfDRCuyMp-1DHqUdBoys9WEu9819MLDR2hLBIBrMk-L4QE5l0rkADlbHYUQawi_itALPi9wuU7JF03MjEWsCX_o47ySnLGQimYI5tbU3j1VRe3tUSHez4RO5CzyjPzGprL20aUr6dVteR7FqoGtLDzT5VKw4CorQ4CKNas8e6F4UkCFU5C0xdqoOtXNUjgvohMCpux8EL0wr1I9zsO0wY986VeYmSFkwl0-4oidTm9Yc__Dv-9mPfpHgc1wuZSwCeetsy4A0plg",
+                        "errorCode": "UnauthorizedOperation"
+                    }
+                ]
+            }
+        }
+    },
+    "requestID": "fea12134-9f81-4cb3-aad5-562087acf06d",
+    "eventID": "31b16586-4d40-437a-aae5-fafe5c4aa02d",
+    "readOnly": false,
+    "eventType": "AwsApiCall",
+    "managementEvent": true,
+    "recipientAccountId": "864590937242",
+    "eventCategory": "Management",
+    "tlsDetails": {
+        "tlsVersion": "TLSv1.2",
+        "cipherSuite": "ECDHE-RSA-AES128-GCM-SHA256",
+        "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com"
+    }
+}

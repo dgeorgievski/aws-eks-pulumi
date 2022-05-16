@@ -1,0 +1,99 @@
+{
+    "Statement": [
+        {
+            "Action": [
+                "ec2:CreateLaunchTemplate",
+                "ec2:CreateFleet",
+                "ec2:CreateTags",
+                "ec2:DescribeLaunchTemplates",
+                "ec2:DescribeInstances",
+                "ec2:DescribeSecurityGroups",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeInstanceTypes",
+                "ec2:DescribeInstanceTypeOfferings",
+                "ec2:DescribeAvailabilityZones"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Action": [
+                "ec2:RunInstances"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "ec2:ResourceTag/karpenter.sh/discovery": "perf-test-nonprod"
+                }
+            },
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Action": [
+                "ec2:TerminateInstances",
+                "ec2:DeleteLaunchTemplate"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "ec2:ResourceTag/karpenter.sh/discovery": "perf-test-nonprod"
+                }
+            },
+            "Effect": "Allow",
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Action": [
+                "ec2:RunInstances"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "ec2:ResourceTag/karpenter.sh/discovery": "perf-test-nonprod"
+                }
+            },
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:*:864590937242:launch-template/*",
+                "arn:aws:ec2:*:864590937242:security-group/*",
+                "arn:aws:ec2:*:864590937242:subnet/*",
+            ]
+        },
+        {
+            "Action": [
+                "ec2:RunInstances"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ec2:*::image/*",
+                "arn:aws:ec2:*:864590937242:instance/*",
+                "arn:aws:ec2:*:864590937242:volume/*",
+                "arn:aws:ec2:*:864590937242:network-interface/*",
+                "arn:aws:ec2:*:864590937242:key-pair/*"
+            ]
+        },
+        {
+            "Action": [
+                "ssm:GetParameter"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:ssm:*:*:parameter/aws/service/*"
+            ]
+        },
+        {
+            "Action": [
+                "iam:PassRole"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:iam::864590937242:role/perf-test-iam-node-role-0204bda"
+            ]
+        }
+    ],
+    "Version": "2012-10-17"
+}

@@ -1,0 +1,49 @@
+apiVersion: karpenter.sh/v1alpha5
+kind: Provisioner
+metadata:
+  name: mozart
+spec:
+  
+  ttlSecondsUntilExpired: 604800 # 7 Days = 60 * 60 * 24 * 7 Seconds;
+
+  # If omitted, the feature is disabled, nodes will never scale down due to low utilization
+  ttlSecondsAfterEmpty: 300
+
+  requirements:
+    - key: karpenter.sh/capacity-type
+      operator: In
+      values: ["spot", "on-demand"]
+    - key: "node.kubernetes.io/instance-type"
+      operator: In
+      values: ["m5a.2xlarge", "m5.2xlarge", "m6a.2xlarge"]
+    - key: "kubernetes.io/arch"
+      operator: In
+      values: ["arm64", "amd64"] 
+
+  limits:
+    resources:
+      cpu: 1000
+      memory: 1000Gi
+  
+  labels:
+    envName: nonprod
+    managedBy: karpenter
+    sysCode: mozart
+    sysID: fd620e5e-c153-11ea-b3de-0242ac130004
+
+  provider:
+    tags:
+      karpenter.sh/discovery: perf-test-nonprod
+      envName: nonprod
+      functionalArea: technology-cio
+      infraOwner: SRE Core
+      managedBy: karpenter
+      sysCode: mozart
+      sysID: fd620e5e-c153-11ea-b3de-0242ac130004
+
+    # instanceProfile: karpenter-controller-perf-test-nonprod
+    launchTemplate: karpenter-perf-test-lt20220506212439891100000001
+    subnetSelector:
+      Name: "mozart-shared-nonprod-priv-us-east-1*"
+    # securityGroupSelector:
+    #   aws:eks:cluster-name: perf-test-nonprod

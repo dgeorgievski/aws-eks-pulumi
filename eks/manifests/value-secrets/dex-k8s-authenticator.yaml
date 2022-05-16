@@ -1,0 +1,31 @@
+config:
+  clusters:
+    - name: eks-dev
+      short_description: "EKS dev cluster"
+      description:  EKS dev cluster"
+      issuer: https://dex.dev.example.com
+      client_id: k8s-auth-eks-dev
+      client_secret: b226aed658fa187c74VjcmV0
+      redirect_uri: https://login.dev.example.com/callback
+      k8s_master_uri: https://C3E3FC5C7E16B2FAB624F9DC140UGE4F.gr7.us-east-1.eks.amazonaws.com
+      k8s_ca_pem: |
+        -----BEGIN CERTIFICATE-----
+        ... cert content --
+        -----END CERTIFICATE-----
+
+
+ingress:
+  enabled: true
+  className: internal-nginx
+  # annotations:
+  #   kubernetes.io/tls-acme: "true"
+  #   cert-manager.io/cluster-issuer: acme
+  hosts:
+    - host: login.dev.example.com
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls:
+    - secretName: login-dev-secret
+      hosts:
+        - login.dev.example.com

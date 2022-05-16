@@ -1,0 +1,21 @@
+apiVersion: "cert-manager.io/v1"
+kind: Certificate
+metadata:
+  name: dex-prod
+  namespace: cert-manager
+spec:
+  secretName: dex-prod-secret
+  duration: 2160h # 90d
+  renewBefore: 480h # 20d
+  secretTemplate:
+    annotations:
+      # copy with kubed to all namespaces
+      kubed.appscode.com/sync: "kubed=dex"
+  usages:
+    - server auth
+  dnsNames:
+    - 'dex.example.com'
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+    group: cert-manager.io

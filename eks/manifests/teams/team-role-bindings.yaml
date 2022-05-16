@@ -1,0 +1,46 @@
+apiVersion: rbac.authorization.k8s.io/v1
+# was-perf admins
+kind: RoleBinding
+metadata:
+  name: ns01-admins
+  namespace: ns01
+subjects:
+- kind: Group
+  name: "my-github-ns01-team"
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: admin
+  apiGroup: rbac.authorization.k8s.io
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+# was-perf admins
+kind: RoleBinding
+metadata:
+  name:: ns02-admins
+  namespace: ns02
+subjects:
+- kind: Group
+  name: "my-github-ns02-team"
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: admin
+  apiGroup: rbac.authorization.k8s.io
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: devops-cluster-admins
+subjects:
+- kind: Group
+  name: "my-github-devops-team"
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io

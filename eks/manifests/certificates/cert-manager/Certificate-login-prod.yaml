@@ -1,0 +1,21 @@
+apiVersion: "cert-manager.io/v1"
+kind: Certificate
+metadata:
+  name: login-prod
+  namespace: cert-manager
+spec:
+  secretName: login-prod-secret
+  duration: 2160h # 90d
+  renewBefore: 480h # 20d
+  secretTemplate:
+    annotations:
+      # copy with kubed to all namespaces
+      kubed.appscode.com/sync: "kubed=dex"
+  usages:
+    - server auth
+  dnsNames:
+    - 'login.example.com'
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+    group: cert-manager.io

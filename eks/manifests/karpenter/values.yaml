@@ -1,0 +1,17 @@
+clusterName: perf-test-nonprod
+
+clusterEndpoint: https://C3E3FC5C7E16B2FAB624F9DC140UGE4F.gr7.us-east-1.eks.amazonaws.com
+
+aws:
+  # -- The default instance profile to use when launching nodes on AWS
+  defaultInstanceProfile: KarpenterNodeInstanceProfile-eks-dev
+
+serviceAccount:
+  # -- Specifies if a ServiceAccount should be created.
+  create: true
+  # -- The name of the ServiceAccount to use.
+  # If not set and create is true, a name is generated using the fullname template.
+  name: "karpenter"
+  # -- Additional annotations for the ServiceAccount.
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::112233445566:role/karpenter-controller-perf-test-nonprod

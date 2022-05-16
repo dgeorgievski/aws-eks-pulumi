@@ -1,0 +1,5 @@
+name: eks
+runtime: go
+description: EKS cluster managed by Pulumi.
+aws:
+  backend: s3://my-state-bucket/pulumi/eks
